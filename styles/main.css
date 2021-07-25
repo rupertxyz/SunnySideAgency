@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+/* font-family: 'Fraunces', serif; */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero {
+    min-height: 50vh;
+    background-image: url("/images/desktop/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 3rem;
+}
+
+nav a li {
+    opacity: 0.8;
+}
+
+nav a button {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+header .hamburger-button {
+    all: inherit;
+    padding: 0;
+    display: none;
+}
+
+.hero h1 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 0.5rem;
+    margin-top: 3rem;
+}
+
+.hero .arrow-down {
+    text-align: center;
+}
+
+/* content */
+
+.content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    place-items: center;
+    /* grid-auto-rows: minmax(250px, 500px); */
+}
+
+.content .box-padding {
+    padding: 20%;
+}
+
+.content .text-container {
+    position: absolute;
+    top: 55%;
+}
+
+.content img { 
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content p {
+    color: grey;
+    opacity: 0.8;
+    line-height: 1.5rem;
+    font-size: 14px;
+}
+
+.content h2 {
+    text-align: left;
+    max-width: 350px;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
+}
+
+.content .box1 a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.03rem;
+    padding-left: 5px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.content .box1 a::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(51, 100%, 49%);
+    width: 110px;
+    height: 10px;
+    left: 0px;
+    top: 10px;
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: 35px;
+}
+
+.content .box4 a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.03rem;
+    padding-left: 5px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.content .box4 a::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(7, 99%, 70%);
+    width: 110px;
+    height: 10px;
+    left: 0px;
+    top: 10px;
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 35px;
+}
+
+.content .box5 {
+    text-align: center;
+    padding-bottom: 2rem;
+    position: relative;
+    color: hsl(167, 40%, 24%);
+}
+
+.content .box5 h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.content .box5 p {
+    color: hsl(167, 40%, 24%);
+    padding: 0 6rem;
+}
+
+.content .box6 {
+    text-align: center;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.content .box6 h2 {
+    color: hsl(198, 62%, 26%);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.content .box6 p {
+    color: hsl(198, 62%, 26%);
+    padding: 0 6rem;
+}
+
+/* testimonials */
+
+.testimonials {
+    padding: 5rem 2rem 5rem 2rem;
+    width: 100%;
+}
+
+.testimonials .flex {
+    gap: 20px;
+}
+
+.testimonials .flex-column-center {
+    min-height: 300px;
+}
+
+.testimonials img {
+    border-radius: 50%;
+    width: 25%;
+}
+
+.testimonials p {
+    text-align: center;
+    margin-top: 2rem;
+    max-width: 315px;
+    color: hsl(213, 9%, 39%);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    min-height: 100px;
+}
+
+.testimonials h3 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 0.3rem;
+    color: gray;
+    opacity: 0.6;
+    font-family: 'Fraunces', serif;
+}
+
+.testimonials h5 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonials small {
+    margin-top: 0.7rem;
+    color: gray;
+    opacity: 0.9;
+}
+
+.gallery > img {
+    display: block;
+    width: 25%;
+}
+
+footer {
+    background-color: rgb(144,212,192);
+    padding: 3.5rem;
+}
+
+footer h3 {
+    text-align: center;
+}
+
+footer .footer-menu {
+    list-style-type: none;
+    gap: 35px;
+    font-size: 0.9rem;
+    color: hsl(167, 40%, 24%);
+    margin-top: 2rem;
+    opacity: 0.6;
+}
+
+footer .social-icons {
+    list-style-type: none;
+    margin-top: 4rem;
+    text-align: center;
+    gap: 35px;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 768px) {
+    .content {
+        grid-template-columns: 100%;
+        place-items: initial;
+    }
+
+    .content .box2 {
+        grid-row: 1 / 2;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 90px;
+        width: 83%;
+        left: 8.5%;
+        height: 250px;
+    }
+
+    nav.active {
+        display: block;
+    }
+    
+    nav::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -23px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 40px 40px;
+        border-color: transparent transparent #ffffff transparent;
+    }
+
+    nav a {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+        color: gray;
+        font-size: 1.2rem;
+        text-align: center;
+        padding-top: 15px;
+    }
+    header .hamburger-button {
+        display: block;
+        cursor: pointer;
+    }
+    nav a button {
+        font-family: 'Fraunces', serif;
+        text-transform: uppercase;
+        border: 0;
+        font-size: 1rem;
+        cursor: pointer; 
+        background-color: hsl(51, 100%, 49%);
+        color: black;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .content .box5 {
+        min-height: 600px;
+        padding-bottom: 0;
+    }
+
+    .content .box5 h2 {
+        margin-block-end: 0;
+        max-width: initial;
+    }
+
+    .content .box5 p {
+       padding: 2rem 2rem;
+       font-size: 1.1rem; 
+    }
+
+    .content .box6 {
+        min-height: 600px;
+    }
+
+    .content .box6 h2 {
+        margin-block-end: 0;
+        max-width: initial;
+    }
+
+    .content .box6 p {
+       padding: 2rem 2rem;
+       font-size: 1.1rem; 
+    }
+
+    .testimonials .flex {
+        flex-direction: column;
+    }
+
+    .testimonials h3 {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .testimonials p {
+        font-size: 1.1rem;
+    } 
+
+    .testimonials h5 {
+        margin-top: 1rem;
+    }
+
+    .testimonials .testimonial {
+        margin-bottom: 1rem;;
+    }
+
+    .testimonials .flex-column-center {
+        min-height: initial;
+    }
+
+  }
+
+
