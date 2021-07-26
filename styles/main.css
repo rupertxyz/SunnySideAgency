@@ -28,7 +28,7 @@ body {
 }
 
 .hero {
-    min-height: 50vh;
+    min-height: 100vh;
     background-image: url("/images/desktop/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,7 +95,7 @@ header .hamburger-button {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(3, minmax(200px, auto));
-    place-items: center;
+    /* place-items: center; */
     /* grid-auto-rows: minmax(250px, 500px); */
 }
 
@@ -124,10 +124,13 @@ header .hamburger-button {
 
 .content h2 {
     text-align: left;
-    max-width: 350px;
     font-size: 2rem;
     font-weight: 900;
     font-family: 'Fraunces', serif;
+}
+
+.content .box1, .box4 {
+    place-self: center;
 }
 
 .content .box1 a {
